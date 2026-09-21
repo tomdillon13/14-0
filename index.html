@@ -1,0 +1,26 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>14-0: Fantasy Draft County Cricket</title><link rel="stylesheet" href="style.css"></head>
+<body><header><div><div class="eyebrow">FANTASY DRAFT COUNTY CRICKET</div><h1>14-0</h1></div><button id="reset">New Game</button></header>
+<main>
+<section id="setup" class="panel hero"><div><span class="kicker">BUILD A CHAMPIONSHIP XI</span><h2>CAN YOU GO 14-0?</h2><p>Every draft round reveals a random county. Build an XI of 5 batters, 2 all-rounders, 1 wicketkeeper and 3 bowlers, then guide them through a 14-match season to win the 18-team fantasy county league.</p><div class="franchise-picker"><label for="county">Choose your county</label><select id="county"></select><button class="primary" id="start">Begin Draft</button></div></div><div class="hero-stat"><b>14</b><span>FOUR-DAY MATCHES</span><b>11</b><span>DRAFT PICKS</span><b>1</b><span>CHAMPIONSHIP</span></div></section>
+
+<section id="draft" class="hide">
+<div class="topline"><div><span class="kicker">DRAFT ROOM</span><h2 id="draftRound"></h2></div><div id="quota"></div></div>
+<div id="reveal" class="reveal"><small>YOUR COUNTY THIS ROUND</small><strong id="revealCounty">?</strong></div>
+<div class="draft-grid"><div class="panel"><div class="filters"><input id="search" placeholder="Search player"><select id="role"><option value="ALL">All roles</option><option>BAT</option><option>AR</option><option>WK</option><option>BOWL</option></select></div><div id="players" class="cards"></div></div><div class="panel"><h3>Your XI</h3><div id="draftXI"></div></div></div>
+</section>
+
+<section id="season" class="hide">
+<div class="dashboard-head"><div><span class="kicker">COUNTY CHAMPIONSHIP</span><h2 id="seasonTitle"></h2><div id="formStrip" class="formstrip"></div></div><div class="record-box"><span>POSITION</span><b id="position">–</b><span>POINTS</span><b id="points">0</b></div></div>
+<div id="calendar" class="calendar"></div>
+<div id="preMatch" class="panel prematch"></div><div id="seasonCompleteActions" class="season-complete-actions hide"><div><span class="kicker">SEASON COMPLETE</span><b>Review your fixtures, scorecards, table and records before continuing.</b></div><button class="primary" id="viewSummary">Next · Season Summary</button></div>
+<div class="dashgrid"><div class="panel"><h3>Squad & selection</h3><p class="muted">Click two players to swap their batting-order positions. Form and BAT/BOWL ability affect match performance.</p><div id="squad"></div></div><div class="panel"><h3>Championship table</h3><div id="table"></div></div></div>
+<div class="dashgrid"><div class="panel"><h3>Season leaders</h3><div class="twocol"><div><h4>Runs</h4><div id="bat"></div></div><div><h4>Wickets</h4><div id="bowl"></div></div></div></div><div class="panel"><h3>Season records</h3><div id="records"></div></div></div>
+</section>
+
+<section id="awards" class="hide panel awards"><span class="kicker">SEASON COMPLETE</span><h2 id="awardTitle"></h2><div id="awardGrid" class="awardgrid"></div><button class="primary" id="again">Start New Season</button></section>
+</main>
+
+<div id="scoreModal" class="modal hide"><div class="modal-card"><div class="modal-head"><div><span class="kicker">MATCH SCORECARD</span><h2 id="modalTitle"></h2></div><button id="closeModal">Close</button></div><div id="scorecard"></div></div></div>
+<div id="revealModal" class="modal hide"><div class="result-reveal"><div id="dayReveal"></div><div id="resultReveal"></div><button id="continueResult" class="primary hide">Continue</button></div></div>
+<script src="data.js"></script><script src="game.js"></script></body></html>
+
