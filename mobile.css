@@ -1,0 +1,59 @@
+/* Responsive layout shared by Original and T20 modes. */
+html{scroll-padding-top:78px;-webkit-text-size-adjust:100%}
+body{min-width:0;overflow-x:hidden}
+main,.panel,.draft-grid>*,.dashgrid>*,.twocol>*,.topline>*,.dashboard-head>*{min-width:0}
+button,select,input{font:inherit;max-width:100%}
+button{touch-action:manipulation;min-height:44px}
+input,select{min-height:44px}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,.selectrow:focus-visible{outline:3px solid #d95564;outline-offset:2px}
+.player-card h3,.row span,.record,.fixture,.bigfixture{overflow-wrap:anywhere}
+#table{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+#table .trow{min-width:430px}
+.modal-card,.result-reveal{width:100%;max-width:900px}
+.innings-card{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.score-row{min-width:520px}
+.bowling-row{min-width:420px}
+.modal{overscroll-behavior:contain}
+@media(max-width:800px){
+ header{padding:12px 16px;gap:10px}
+ main{padding:18px 12px 64px}
+ .panel{padding:14px}
+ .hero{padding:20px}
+ .hero-stat{grid-template-columns:65px 1fr;max-width:300px}
+ .topline,.dashboard-head{flex-wrap:wrap}
+ .record-box{margin-left:auto}
+ .filters{flex-wrap:wrap}
+ .filters input{flex:1 1 160px;min-width:0}
+ .filters select{flex:1 1 110px}
+ .prematch{gap:10px}
+ .prematch .primary{width:100%}
+ .modal{padding:10px}
+ .modal-card{margin:8px auto;padding:14px}
+ .result-reveal{margin:12vh auto;padding:22px 14px}
+ .twocol{gap:10px}
+ .score-row{grid-template-columns:1fr 1.5fr 52px 42px 42px 55px}
+ .score-row .dismissal,.score-row .sr,.score-row .fours{display:block}
+}
+@media(max-width:480px){
+ header h1{font-size:17px}
+ .eyebrow{font-size:9px;letter-spacing:.1em}
+ .hero h2{font-size:clamp(27px,9vw,36px)}
+ .calendar{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
+ .fixture{min-height:92px;padding:9px 8px}
+ .fixture>b{font-size:12px}
+ .cards{grid-template-columns:1fr}
+ .twocol{grid-template-columns:1fr}
+ .mode-home{padding:0 12px}
+ .mode-choice{min-height:0}
+ .awardgrid{grid-template-columns:1fr}
+ .bigfixture{font-size:20px}
+ .daycard{font-size:22px}
+ .finalresult{font-size:25px}
+ .row{align-items:flex-start}
+ .row>span:last-child{flex-shrink:0}
+ .franchise-picker{grid-template-columns:1fr}
+ .franchise-picker button{width:100%}
+ .trow{font-size:12px}
+}
+@media(max-width:350px){.calendar{grid-template-columns:1fr}.header-actions button{font-size:12px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important}}
