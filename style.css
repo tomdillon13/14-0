@@ -15,3 +15,33 @@
 @media(max-width:650px){.franchise-picker{grid-template-columns:1fr}.franchise-picker label{grid-column:auto}.season-complete-actions{align-items:stretch;flex-direction:column}.season-complete-actions button{width:100%}}
 
 /* Cricket palette: whites, red-ball accents and black typography. Game logic unchanged. */
+
+/* Game-mode landing page and navigation */
+.mode-home{max-width:1020px;margin:50px auto;padding:0 18px}.mode-home>h2{font-size:clamp(2rem,5vw,3.2rem);margin:12px 0}.mode-home>.muted{margin-bottom:28px}.mode-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.mode-choice{display:flex;flex-direction:column;gap:14px;text-decoration:none;color:inherit;min-height:270px;transition:transform .15s,border-color .15s}.mode-choice:hover,.mode-choice:focus-visible{transform:translateY(-3px);border-color:var(--accent,#a3cf79)}.mode-choice h2{margin:0}.mode-choice p{line-height:1.65;flex:1}.mode-action{font-weight:800;text-decoration:underline;text-underline-offset:5px}.mode-nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px max(20px,calc((100vw - 1200px)/2));background:#14221c;color:#f4f4ef;font-size:.85rem;letter-spacing:.08em}.mode-nav a{color:inherit;text-decoration:none}.mode-nav a:hover{text-decoration:underline}@media(max-width:680px){.mode-grid{grid-template-columns:1fr}.mode-home{margin:25px auto}.mode-choice{min-height:220px}}
+
+/* Compact game navigation: no secondary top bar. */
+.header-actions{display:flex;align-items:center;gap:10px}
+@media(max-width:480px){.header-actions{gap:6px}.header-actions button{padding:8px}}
+
+/* T20-only inverse palette: dark surfaces, light typography, crisp red accents.
+   Scoped to T20 Mode so Original Mode and the main menu remain unchanged. */
+.t20-theme{background:#171717;color:#f4f4f2}
+.t20-theme header{background:#171717;border-bottom-color:#494949}
+.t20-theme .panel,.t20-theme .player-card,.t20-theme .fixture,.t20-theme .fixture.done,.t20-theme .modal-card,.t20-theme .result-reveal{background:#252525;color:#f4f4f2;border-color:#505050}
+.t20-theme .eyebrow,.t20-theme .kicker,.t20-theme .hero-stat b{color:#ff6474}
+.t20-theme button:not(.primary),.t20-theme select,.t20-theme input{background:#303030;color:#f4f4f2;border-color:#666}
+.t20-theme .primary{background:#e23a50;color:#fff}
+.t20-theme .stat,.t20-theme .quota span,.t20-theme .award,.t20-theme .season-complete-actions,.t20-theme .result-banner,.t20-theme .innings-title,.t20-theme .reveal{background:#333;color:#f4f4f2;border-color:#505050}
+.t20-theme .quota .done,.t20-theme .section-label{background:#f4f4f2;color:#171717}
+.t20-theme .trait,.t20-theme .tag,.t20-theme .potm{border-color:#777;color:#e0e0dc}
+.t20-theme .fixture>b,.t20-theme .fixture small,.t20-theme .fixture.done small:last-child,.t20-theme .fixture .condition{color:#e4e4df}
+.t20-theme .muted,.t20-theme .condition,.t20-theme .hero-stat span,.t20-theme .record-box span,.t20-theme .head,.t20-theme .franchise-picker label{color:#bcbcb6}
+.t20-theme .row,.t20-theme .trow,.t20-theme .record,.t20-theme .score-row,.t20-theme .bowling-row{border-bottom-color:#505050;border-top-color:#505050}
+.t20-theme .trow.me,.t20-theme .selectrow.selected{background:#472b32}
+.t20-theme .fixture.current{outline-color:#ff6474}
+.t20-theme .W,.t20-theme .up{color:#70db92}
+.t20-theme .L,.t20-theme .down{color:#ff7786}
+.t20-theme .D{color:#ffcb6b}
+.t20-theme .modal{background:#000d}
+.t20-theme .reveal{background:radial-gradient(circle,#383838,#252525)}
+.t20-theme .season-complete-actions{border:1px solid #505050}
